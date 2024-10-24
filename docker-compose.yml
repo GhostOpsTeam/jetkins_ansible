@@ -15,7 +15,7 @@ services:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false # Bỏ qua wizard setup
 
   ansible:
-    image: ansible/ansible:latest
+    image: williamyeh/ansible:alpine3
     container_name: ansible
     volumes:
       - ./ansible:/ansible  # Mount thư mục Ansible vào container
