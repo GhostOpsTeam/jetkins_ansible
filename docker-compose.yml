@@ -9,7 +9,7 @@ services:
       context: .  # Sử dụng Dockerfile từ thư mục hiện tại
       dockerfile: Dockerfile
     volumes:
-      - jenkins_home:/var/jenkins_home  # Lưu trữ dữ liệu Jenkins
+      - ./jenkins_home:/var/jenkins_home  # Lưu trữ dữ liệu Jenkins
       - /var/run/docker.sock:/var/run/docker.sock # Cho phép Jenkins quản lý Docker
     environment:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false # Bỏ qua wizard setup
